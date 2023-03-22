@@ -1,5 +1,11 @@
+'use client'
 import Link from 'next/link'
+import {useRouter} from 'next/navigation'
 export default function RootLayout({children}: {children: React.ReactNode}) {
+    const router = useRouter()
+    const onClickUrl = (url: string) => {
+        router.push(url)
+    }
     return (
         <html>
             <head />
@@ -11,10 +17,7 @@ export default function RootLayout({children}: {children: React.ReactNode}) {
                     <li>
                         <Link href={'/dashboard'}>Dashboard</Link>
                     </li>
-                    <li>
-                        {' '}
-                        <Link href={'/setting'}>Setting</Link>
-                    </li>
+                    <li onClick={() => onClickUrl('/settings')}> Setting</li>
                 </ul>
                 {children}
                 <div>Footer</div>
