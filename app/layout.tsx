@@ -20,6 +20,9 @@ export default function RootLayout({children}: {children: React.ReactNode}) {
                     <li>
                         <Link href={'/settings'}>Setting</Link>
                     </li>
+                    <li>
+                        <Link href={'/cari'}>Cari USer</Link>
+                    </li>
                 </ul>
                 {children}
                 <div>Footer</div>
