@@ -17,7 +17,9 @@ export default function RootLayout({children}: {children: React.ReactNode}) {
                     <li>
                         <Link href={'/dashboard'}>Dashboard</Link>
                     </li>
-                    <li onClick={() => onClickUrl('/settings')}> Setting</li>
+                    <li>
+                        <Link href={'/settings'}>Setting</Link>
+                    </li>
                 </ul>
                 {children}
                 <div>Footer</div>
