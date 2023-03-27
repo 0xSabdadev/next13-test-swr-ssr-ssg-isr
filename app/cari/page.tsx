@@ -13,9 +13,13 @@ export default function page() {
     }
     return (
         <div>
-            <form onSubmit={onSearch}>
-                <input type='text' placeholder='Cari User' />
-                <button>cari orang</button>
+            <form onSubmit={onSearch} className='flex w-full space-x-3 mt-10'>
+                <input
+                    type='text'
+                    className='bg-zinc-100 w-5/6 px-3 rounded-md'
+                    placeholder='Cari Github User'
+                />
+                <button className='bg-blue-600 text-white rounded-lg py-2 w-1/6'>Search</button>
             </form>
             {query && <SectionResult query={query} />}
         </div>
